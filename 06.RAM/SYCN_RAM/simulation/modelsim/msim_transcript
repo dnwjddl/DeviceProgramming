@@ -1,0 +1,132 @@
+# Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do lab06_2_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {lab06_2_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity lab06_2
+# -- Compiling architecture structure of lab06_2
+# 
+vsim +altera -do lab06_2_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp /=D:/altera/13.1/work/6_2/simulation/modelsim/lab06_2_vhd.sdo gate_work.lab06_2
+# vsim +altera -do lab06_2_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp /=D:/altera/13.1/work/6_2/simulation/modelsim/lab06_2_vhd.sdo gate_work.lab06_2 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading gate_work.lab06_2(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading cycloneive.cycloneive_ram_block(block_arch)
+# Loading cycloneive.cycloneive_ram_register(reg_arch)
+# Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
+# Loading instances from D:/altera/13.1/work/6_2/simulation/modelsim/lab06_2_vhd.sdo
+# Loading timing data from D:/altera/13.1/work/6_2/simulation/modelsim/lab06_2_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /lab06_2 File: lab06_2_6_1200mv_85c_slow.vho
+# do lab06_2_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {lab06_2_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity lab06_2
+# -- Compiling architecture structure of lab06_2
+# 
+wave create -pattern none -portmode in -language vhdl /lab06_2/clock1
+# lab06_2
+wave create -pattern none -portmode in -language vhdl /lab06_2/clock2
+# lab06_2
+wave create -pattern none -portmode in -language vhdl -range 7 0 /lab06_2/data_in
+# lab06_2
+wave create -pattern none -portmode in -language vhdl -range 7 0 /lab06_2/write_address
+# lab06_2
+wave create -pattern none -portmode in -language vhdl -range 7 0 /lab06_2/read_address
+# lab06_2
+wave create -pattern none -portmode in -language vhdl /lab06_2/wr
+# lab06_2
+wave create -pattern none -portmode out -language vhdl -range 7 0 /lab06_2/data_out
+# lab06_2
+add wave -position end  sim:/lab06_2/data_out
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 100ns -dutycycle 50 -starttime 0ns -endtime 1000ns Edit:/lab06_2/clock1
+# lab06_2
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 100ns -dutycycle 50 -starttime 0ns -endtime 1000ns Edit:/lab06_2/clock2
+# lab06_2
+wave modify -driver freeze -pattern constant -value 00000000 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06_2/data_in
+# lab06_2
+wave modify -driver freeze -pattern constant -value 00000000 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06_2/write_address
+# lab06_2
+wave modify -driver freeze -pattern constant -value 00000000 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06_2/read_address
+# lab06_2
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns Edit:/lab06_2/wr
+# lab06_2
+wave edit change_value -start 174977ps -end 328082ps -value 1 Edit:/lab06_2/wr
+wave edit change_value -start 541657ps -end 633005ps -value 1 Edit:/lab06_2/wr
+wave edit change_value -start 729500ps -end 871026ps -value 1 Edit:/lab06_2/wr
+wave edit change_value -start 138952ps -end 285624ps -value 10110110 Edit:/lab06_2/data_in
+wave edit change_value -start 276618ps -end 473467ps -value 11110011 Edit:/lab06_2/data_in
+wave edit change_value -start 468321ps -end 576395ps -value 00001100 Edit:/lab06_2/data_in
+wave edit change_value -start 568676ps -end 734646ps -value 11111111 Edit:/lab06_2/data_in
+wave edit change_value -start 732073ps -end 828568ps -value 00100010 Edit:/lab06_2/data_in
+wave edit change_value -start 822135ps -end 952081ps -value 11010000 Edit:/lab06_2/data_in
+wave edit change_value -start 78482ps -end 230301ps -value 00000001 Edit:/lab06_2/write_address
+wave edit change_value -start 227728ps -end 434870ps -value 00000010 Edit:/lab06_2/write_address
+wave edit change_value -start 428437ps -end 587975ps -value 00000011 Edit:/lab06_2/data_in
+wave edit change_value -start 432296ps -end 625286ps -value 00000011 Edit:/lab06_2/write_address
+wave edit change_value -start 618853ps -end 768098ps -value 00000101 Edit:/lab06_2/write_address
+wave edit change_value -start 762952ps -end 903191ps -value 0000110 Edit:/lab06_2/write_address
+# Value length (7) does not equal array index length (8).
+# 
+wave edit change_value -start 762952ps -end 903191ps -value 0000110 Edit:/lab06_2/write_address
+# Value length (7) does not equal array index length (8).
+# 
+wave edit change_value -start 752659ps -end 905764ps -value 0000110 Edit:/lab06_2/write_address
+# Value length (7) does not equal array index length (8).
+# 
+wave edit change_value -start 756519ps -end 954654ps -value 0000110 Edit:/lab06_2/write_address
+# Value length (7) does not equal array index length (8).
+# 
+wave edit change_value -start 64330ps -end 216148ps -value 00000001 Edit:/lab06_2/read_address
+wave edit change_value -start 211002ps -end 410424ps -value 00000010 Edit:/lab06_2/read_address
+wave edit change_value -start 405278ps -end 573822ps -value 00000011 Edit:/lab06_2/read_address
+wave edit change_value -start 560956ps -end 672890ps -value 00000100 Edit:/lab06_2/read_address
+wave edit change_value -start 671603ps -end 783537ps -value 00001010 Edit:/lab06_2/read_address
+wave edit change_value -start 779677ps -end 928923ps -value 00001001 Edit:/lab06_2/read_address
+wave edit change_value -start 760378ps -end 882605ps -value 00001000 Edit:/lab06_2/write_address
+wave edit change_value -start 88775ps -end 221295ps -value 1 Edit:/lab06_2/clock2
+wave edit change_value -start 244453ps -end 376973ps -value 0 Edit:/lab06_2/clock2
+wave edit change_value -start 379546ps -end 492766ps -value 1 Edit:/lab06_2/clock2
+wave edit change_value -start 589261ps -end 667743ps -value 1 Edit:/lab06_2/clock2
+run -all
+wave editwrite -file D:/altera/13.1/work/6_2/simulation/modelsim/wave.do
