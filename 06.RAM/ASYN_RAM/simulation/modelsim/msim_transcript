@@ -1,0 +1,128 @@
+# Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do lab06_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {lab06_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity lab06
+# -- Compiling architecture structure of lab06
+# 
+vsim +altera -do lab06_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp /=D:/altera/13.1/work/06/simulation/modelsim/lab06_vhd.sdo gate_work.lab06
+# vsim +altera -do lab06_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp /=D:/altera/13.1/work/06/simulation/modelsim/lab06_vhd.sdo gate_work.lab06 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading gate_work.lab06(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading instances from D:/altera/13.1/work/06/simulation/modelsim/lab06_vhd.sdo
+# Loading timing data from D:/altera/13.1/work/06/simulation/modelsim/lab06_vhd.sdo
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /lab06 File: lab06_6_1200mv_85c_slow.vho
+# do lab06_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {lab06_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity lab06
+# -- Compiling architecture structure of lab06
+# 
+wave create -pattern none -portmode in -language vhdl -range 7 0 /lab06/data_in
+# lab06
+wave create -pattern none -portmode in -language vhdl -range 7 0 /lab06/address
+# lab06
+wave create -pattern none -portmode in -language vhdl /lab06/wr
+# lab06
+wave create -pattern none -portmode buffer -language vhdl -range 7 0 /lab06/data_out
+# lab06
+add wave -position end  sim:/lab06/data_out
+wave modify -driver freeze -pattern random -initialvalue (no value) -period 50ns -random_type Uniform -seed 5 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06/data_in
+# Value length (3) does not equal array index length (8).
+# 
+#Invalid value to -initialvalue switch: (no
+# 
+wave modify -driver freeze -pattern random -initialvalue 2D -period 50ns -random_type Normal -seed 5 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06/data_in
+# Value length (2) does not equal array index length (8).
+# 
+#Invalid value to -initialvalue switch: 2D
+# 
+wave modify -driver freeze -pattern random -initialvalue 00000000 -period 50ns -random_type Normal -seed 5 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06/data_in
+# lab06
+wave modify -driver freeze -pattern random -initialvalue 00000000 -period 50ns -random_type Poisson -seed 5 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06/data_in
+# lab06
+wave modify -driver freeze -pattern random -initialvalue 00000000 -period 50ns -random_type Normal -seed 5 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06/data_in
+# lab06
+wave modify -driver freeze -pattern random -initialvalue 00000000 -period 50ns -random_type Uniform -seed 5 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06/address
+# lab06
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns Edit:/lab06/wr
+# lab06
+wave edit change_value -start 0ps -end 67736ps -value 0000000 Edit:/lab06/data_in
+# Value length (7) does not equal array index length (8).
+# 
+wave edit change_value -start 0ps -end 62480ps -value 00000000 Edit:/lab06/data_in
+wave edit change_value -start 0ps -end 55473ps -value 00000000 Edit:/lab06/data_in
+wave edit change_value -start 0ps -end 57225ps -value 00000000 Edit:/lab06/address
+wave edit change_value -start 130800ps -end 177514ps -value 1 Edit:/lab06/wr
+wave edit change_value -start 277365ps -end 371962ps -value 1 Edit:/lab06/wr
+wave edit change_value -start 56641ps -end 157660ps -value 00001011 Edit:/lab06/address
+wave modify -driver freeze -pattern constant -value 00000000 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06/data_in
+# lab06
+wave modify -driver freeze -pattern constant -value 00000000 -range 7 0 -starttime 0ns -endtime 1000ns Edit:/lab06/address
+# lab06
+wave edit change_value -start 133535ps -end 334931ps -value 10100000 Edit:/lab06/data_in
+wave edit change_value -start 334931ps -end 499113ps -value 11101011 Edit:/lab06/data_in
+wave edit change_value -start 489262ps -end 721306ps -value 00001101 Edit:/lab06/data_in
+wave edit change_value -start 713645ps -end 831856ps -value 00000001 Edit:/lab06/data_in
+wave edit change_value -start 824194ps -end 894245ps -value 00100011 Edit:/lab06/data_in
+wave edit change_value -start 88658ps -end 204680ps -value 00000001 Edit:/lab06/address
+wave edit change_value -start 201397ps -end 360106ps -value 00000010 Edit:/lab06/address
+wave edit change_value -start 356822ps -end 587772ps -value 00000011 Edit:/lab06/address
+wave edit change_value -start 581204ps -end 741008ps -value 00001001 Edit:/lab06/address
+wave edit change_value -start 733346ps -end 847179ps -value 00001011 Edit:/lab06/address
+wave edit change_value -start 840612ps -end 978525ps -value 10101010 Edit:/lab06/address
+wave edit change_value -start 630459ps -end 767277ps -value 1 Edit:/lab06/wr
+# Load canceled
+run -all
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+wave editwrite -file D:/altera/13.1/work/06/simulation/modelsim/wave.do
