@@ -64,6 +64,7 @@ end rt1;
 ---
 
 ### Entity의 모드
+- ```In```, ```Out```
 - ```Buffer``` 모드 & ```Inout```모드
 
 #### ```INOUT```모드
@@ -74,3 +75,25 @@ end rt1;
 - 
 #### ```BUFFER```모드
 - Inout과 같은 입출력 포트로서 assign의 소스측 또는 목적지 측에 쓸 수 있다_
+- INOUT모드와 다른 점은 단일 할당 문내에서 소스와 목적지 측 모두 동시에 사용할 수 있다는 것이다
+- 이는 BUFFER모드에 이미 F/F를 내포하고 있다는 의미
+
+## 순서
+1. Package
+2. Entity
+  - Architecture
+    - Process
+3. Configuration
+
+### Package
+- 단일 목적을 위한 선언(declaration)
+
+### Entity
+- 설계 회로의 인터페이스에 관한 정보를 기술한 본체 부분
+
+#### Port 종류
+- IN : 입력, 신호가 해당 ENTITY로 입력되는 경우 사용
+- OUT : 출력, 해당 ENTITY에서 신호가 출력되는 경우 사용
+- INOUT : 입출력, 신호가 해당 ENTITY에서 양방향으로 사용
+- BUFFER : 출력 기능 신호에 ENTITY내에서 다시 읽는 기능을 추가한 것
+- LINKAGE : 동작에 영향을 주지 않으며, 단지 포트로서 연결된 경우 사용
