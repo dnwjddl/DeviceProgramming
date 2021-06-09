@@ -97,3 +97,14 @@ end rt1;
 - INOUT : 입출력, 신호가 해당 ENTITY에서 양방향으로 사용
 - BUFFER : 출력 기능 신호에 ENTITY내에서 다시 읽는 기능을 추가한 것
 - LINKAGE : 동작에 영향을 주지 않으며, 단지 포트로서 연결된 경우 사용
+
+
+## Architecture
+- 병행구문
+  - 병행구문 -> 동시처리
+- 순차구문
+  - PROCESS문을 통해 순차구문을 지원
+
+#### SIGNAL
+- VHDL 합성 시에 선(WIRE)으로 구현
+- 각 부품(COMPONENT)의의 연결에 사용되는 외적 변수
