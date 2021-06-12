@@ -1,0 +1,98 @@
+# Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do lab02_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {lab02_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity lab02
+# -- Compiling architecture structure of lab02
+# 
+vsim +altera -do lab02_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp /=D:/altera/13.1/02/simulation/modelsim/lab02_vhd.sdo gate_work.lab02
+# vsim +altera -do lab02_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp /=D:/altera/13.1/02/simulation/modelsim/lab02_vhd.sdo gate_work.lab02 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading gate_work.lab02(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading instances from D:/altera/13.1/02/simulation/modelsim/lab02_vhd.sdo
+# Loading timing data from D:/altera/13.1/02/simulation/modelsim/lab02_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /lab02 File: lab02_6_1200mv_85c_slow.vho
+# do lab02_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {lab02_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity lab02
+# -- Compiling architecture structure of lab02
+# 
+wave create -pattern none -portmode in -language vhdl /lab02/clock
+# lab02
+wave create -pattern none -portmode in -language vhdl /lab02/Resetn
+# lab02
+wave create -pattern none -portmode in -language vhdl /lab02/x
+# lab02
+wave create -pattern none -portmode out -language vhdl /lab02/z
+# lab02
+add wave -position end  sim:/lab02/z
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 100ns -dutycycle 50 -starttime 0ns -endtime 1000ns Edit:/lab02/clock
+# lab02
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns Edit:/lab02/Resetn
+# lab02
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 100ns -dutycycle 50 -starttime 0ns -endtime 1000ns Edit:/lab02/x
+# lab02
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns Edit:/lab02/x
+# lab02
+wave edit change_value -start 0ps -end 33125ps -value 1 Edit:/lab02/Resetn
+wave edit change_value -start 99375ps -end 198750ps -value 1 Edit:/lab02/x
+wave edit change_value -start 303836ps -end 397499ps -value 1 Edit:/lab02/x
+wave edit change_value -start 501443ps -end 596249ps -value 1 Edit:/lab02/x
+run -all
+wave edit change_value -start 0ps -end 43405ps -value 0 Edit:/lab02/Resetn
+wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 1000ns Edit:/lab02/Resetn
+# lab02
+run -all
+wave editwrite -file D:/altera/13.1/02/simulation/modelsim/wave.do
