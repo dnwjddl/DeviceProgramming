@@ -1,0 +1,125 @@
+# Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do lab11_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/altera/13.1/CPU/lab11.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity lab11
+# -- Compiling architecture FSMD of lab11
+# 
+vsim +altera -do lab11_run_msim_rtl_vhdl.do -l msim_transcript -gui work.lab11
+# vsim +altera -do lab11_run_msim_rtl_vhdl.do -l msim_transcript -gui work.lab11 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_components
+# Loading work.lab11(fsmd)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# do lab11_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/altera/13.1/CPU/lab11.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity lab11
+# -- Compiling architecture FSMD of lab11
+# 
+wave create -pattern none -portmode in -language vhdl /lab11/clock
+# lab11
+wave create -pattern none -portmode in -language vhdl /lab11/reset
+# lab11
+wave create -pattern none -portmode in -language vhdl /lab11/enter
+# lab11
+wave create -pattern none -portmode in -language vhdl -range 7 0 /lab11/input
+# lab11
+wave create -pattern none -portmode out -language vhdl -range 7 0 /lab11/output
+# lab11
+add wave -position end  sim:/lab11/output
+add wave -position end  sim:/lab11/state
+add wave -position end  sim:/lab11/IR
+add wave -position end  sim:/lab11/PC
+add wave -position end  sim:/lab11/A
+add wave -position end  sim:/lab11/memory_address
+add wave -position end  sim:/lab11/memory_data
+add wave -position end  sim:/lab11/MemWr
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 100ns -dutycycle 50 -starttime 0ns -endtime 50000ns Edit:/lab11/clock
+# lab11
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 50000ns Edit:/lab11/reset
+# lab11
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 50000ns Edit:/lab11/enter
+# lab11
+wave modify -driver freeze -pattern constant -value 0 -range 7 0 -starttime 0ns -endtime 50000ns Edit:/lab11/input
+# Value length (1) does not equal array index length (8).
+# 
+#Invalid value to -value switch: 0
+# Usage: wave create -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+wave modify -driver freeze -pattern constant -value 0 -range 7 0 -starttime 0ns -endtime 50000ns Edit:/lab11/input
+# Value length (1) does not equal array index length (8).
+# 
+#Invalid value to -value switch: 0
+# Usage: wave create -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+wave modify -driver freeze -pattern constant -value 00000000 -range 7 0 -starttime 0ns -endtime 50000ns Edit:/lab11/input
+# lab11
+wave edit change_value -start 0ps -end 69159ps -value 1 Edit:/lab11/clock
+wave edit undo 1
+wave edit change_value -start 0ps -end 75852ps -value 1 Edit:/lab11/reset
+wave edit change_value -start 729516ps -end 867834ps -value 00000100 Edit:/lab11/enter
+# ** Error: (vish-4026) Value "00000100" does not represent a literal of the enumeration type.
+wave edit change_value -start 730632ps -end 874527ps -value 00000100 Edit:/lab11/input
+wave edit change_value -start 823216ps -end 875643ps -value 1 Edit:/lab11/enter
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /lab11/memory
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /lab11/memory
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /lab11/memory
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 2  Instance: /lab11/memory
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ns  Iteration: 2  Instance: /lab11/memory
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 0  Instance: /lab11/memory
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ns  Iteration: 0  Instance: /lab11/memory
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 150 ns  Iteration: 0  Instance: /lab11/memory
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 150 ns  Iteration: 0  Instance: /lab11/memory
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ns  Iteration: 0  Instance: /lab11/memory
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ns  Iteration: 0  Instance: /lab11/memory
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 250 ns  Iteration: 0  Instance: /lab11/memory
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 250 ns  Iteration: 0  Instance: /lab11/memory
+wave editwrite -file D:/altera/13.1/CPU/simulation/modelsim/wave.do

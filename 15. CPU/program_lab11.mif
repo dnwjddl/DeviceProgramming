@@ -1,0 +1,41 @@
+-- Content of the RAM memory in the file PROGRAM.MIF
+
+DEPTH = 32;		-- Depth of memory: 5-bit address
+WIDTH = 8;		-- Width of memory: 8-bit data
+
+ADDRESS_RADIX = BIN;	-- All values in binary (HEX, DEC, OCT, BIN)
+DATA_RADIX = BIN;
+
+-- Opcodes for the EC-2
+--		000 = load A,aaaaa
+--		001 = store A,aaaaa
+--		010 = add A,aaaaa
+--		011 = sub A,aaaaa
+--		100 = in A
+--		101 = jz aaaaa
+--		110 = jpos aaaaa
+--		111 = halt
+
+CONTENT
+	BEGIN
+	[00000..11111]	:	00000000;	-- Initialize locations range 00-FF to 0000
+-- Sum
+-- Program to sum N downto 1
+	00000	:	10000000;	-- input
+	00001	:	01011101;	-- add
+	00010	:	01100000;	-- decrement
+	00011	:	10100000;	-- out a
+	00100	:	00111111;	-- store A
+
+	00101	:	00011111;	-- load A
+	00110	:	01011101;	-- add --a+2
+	00111	:	01100000;	-- dec a-1
+	01000	:	10100000;	-- out A			-- decrement A
+	01001	:	01111111;	-- store A
+
+	01010	:	11000101;	-- if a>= 0, loop
+-- Data
+	11101	:	00000010;	-- two
+	11111	:	00000000;	-- a
+
+END;
